@@ -1,0 +1,28 @@
+html {
+--text: #f6f7f9;
+--background: #05060a;
+--primary: #b61e95;
+--secondary: #ea51e2;
+--accent: #9810b0;
+}
+
+body {
+    color: var(--text);
+    background:VAR(--background);
+}
+
+h1 {
+    color: var(--accent)
+}
+
+h2 {
+    color: var(--primary);
+}
+
+.dogs li::marker {
+    color: var(--accent)
+}
+
+li::marker {
+    color: var(--secondary);
+}
