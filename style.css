@@ -9,10 +9,12 @@ html {
 body {
     color: var(--text);
     background:VAR(--background);
+    font-family: "Great Vibes";
 }
 
 h1 {
-    color: var(--accent)
+    color: var(--accent);
+    font-family: "coming soon";
 }
 
 h2 {
@@ -20,7 +22,8 @@ h2 {
 }
 
 .dogs li::marker {
-    color: var(--accent)
+    color: var(--accent);
+    font-family: "M Plus 1P";
 }
 
 li::marker {
