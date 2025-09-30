@@ -1,31 +1,68 @@
 html {
---text: #f6f7f9;
---background: #05060a;
---primary: #b61e95;
---secondary: #ea51e2;
---accent: #9810b0;
+    --text: #f6f7f9;
+    --background: #05060a;
+    --primary: #b61e95;
+    --secondary: #ea51e2;
+    --accent: #9810b0;
 }
-
+* {
+    /* border: 1px solid pink; */ 
+}
 body {
     color: var(--text);
-    background:VAR(--background);
-    font-family: "Great Vibes";
+    background: VAR(--background);
+    font-family: "great vibes";
+    font-size: larger;
+    font-weight: 300;
+    font-style: normal;
 }
 
 h1 {
     color: var(--accent);
-    font-family: "coming soon";
+    font-family: "M PLUS 1p";
 }
 
 h2 {
     color: var(--primary);
+    font-family: "coming soon";
 }
 
 .dogs li::marker {
     color: var(--accent);
-    font-family: "M Plus 1P";
+
 }
 
 li::marker {
     color: var(--secondary);
+}
+.borngrin{
+   border: 2px solid var(--secondary);
+}
+
+h1{
+    padding-top: 20px 
+}
+
+h2{
+    padding-bottom: 20px
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+h1 {
+    border: 2px solid var(--secondary)
+}
+
+h1 {
+    margin-right: 8%;
+}
+
+h1 {
+    width: 1000px ;
+}
+
+h2 {
+    height: 10px
 }
