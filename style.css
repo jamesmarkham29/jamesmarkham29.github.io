@@ -25,6 +25,7 @@ h1 {
 h2 {
     color: var(--primary);
     font-family: "coming soon";
+    font-weight: bolder;
 }
 
 .dogs li::marker {
