@@ -1,9 +1,10 @@
 html {
-    --text: #f6f7f9;
-    --background: #05060a;
-    --primary: #b61e95;
-    --secondary: #ea51e2;
-    --accent: #9810b0;
+   --text: #071110;
+--background: #f9fdfd;
+--primary: #38cdc4;
+--secondary: #91eae5;
+--accent: #60ebe2;
+
 }
 * {
     /* border: 1px solid pink; */ 
