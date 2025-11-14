@@ -86,7 +86,7 @@
 
       btnGreet.addEventListener("click", () => {
         let name = nameInput.value;
-        let age = ageImput.value;
+        let age = ageInput.value;
         greetingOutput.innerText =
           "hello " + name + ", you are" + age + " years old!";
         // TODO: Display a message like "Hello NAME, you are AGE years old!"
@@ -103,8 +103,8 @@
       colorOutput.textContent = "test content.";
 
       colorInput.addEventListener("input", () => {
-      volumeInput
-      }
+        document.body.style.backgroundColor = "colorInput.value";
+      });
      
       // TODO: Update the background color of colorOutput whenever the color input changes.
       // Challenge: Also display the hex code and volume value dynamically.
