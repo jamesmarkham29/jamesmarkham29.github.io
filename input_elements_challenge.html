@@ -88,7 +88,7 @@
         let name = nameInput.value;
         let age = ageInput.value;
         greetingOutput.innerText =
-          "hello " + name + ", you are" + age + " years old!";
+          "hello " + name + ", you are " + age + " years old!";
         // TODO: Display a message like "Hello NAME, you are AGE years old!"
         // Challenge: If age < 13, show "You're just a kid!" instead.
         if (age < 13) {
@@ -103,7 +103,8 @@
       colorOutput.textContent = "test content.";
 
       colorInput.addEventListener("input", () => {
-        document.body.style.backgroundColor = "colorInput.value";
+        colorOutput.style.backgroundColor = colorInput.value;
+        
       });
      
       // TODO: Update the background color of colorOutput whenever the color input changes.
