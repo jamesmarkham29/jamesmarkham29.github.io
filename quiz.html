@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Quiz</h1>
     <ol>
+      <li>
+        How old is my youngest dog?<br />
+        <input type="radio" name="q1" value="A" /> A: 1 Year<br />
+        <input type="radio" name="q1" value="B" /> B: 2 Year<br />
+        <input type="radio" name="q1" value="C" /> C: 4 Month<br />
+        <input type="radio" name="q1" value="D" /> D: 10 Month
+      </li>
 
-    <li>
-        How old is my youngest dog?<br>
-        <input type="radio" name="q1" value="A"> A: 1 Year<br>
-        <input type="radio" name="q1" value="B"> B: 2 Year<br>
-        <input type="radio" name="q1" value="C"> C: 4 Month<br>
-        <input type="radio" name="q1" value="D"> D: 10 Month
-    </li>
+      <br />
 
-    <br>
+      <li>
+        How many siblings do I have?<br />
+        <input type="radio" name="q2" value="A" /> A: 4 <br />
+        <input type="radio" name="q2" value="B" /> B: 2 <br />
+        <input type="radio" name="q2" value="C" /> C: 1 <br />
+        <input type="radio" name="q2" value="D" /> D: 10
+      </li>
 
-    <li>
-        How many siblings do I have?<br>
-        <input type="radio" name="q2" value="A"> A: 4 <br>
-        <input type="radio" name="q2" value="B"> B: 2 <br>
-        <input type="radio" name="q2" value="C"> C: 1 <br>
-        <input type="radio" name="q2" value="D"> D: 10
-    </li>
-    
-    <br>
+      <br />
 
-    <li>
-        What is my older dogs name?<br>
-        <input type="radio" name="q3" value="A"> A: Tru <br>
-        <input type="radio" name="q3" value="B"> B: Rocky <br>
-        <input type="radio" name="q3" value="C"> C: Aya <br>
-        <input type="radio" name="q3" value="D"> D: Axle
-    </li>
-
+      <li>
+        What is my older dogs name?<br />
+        <input type="radio" name="q3" value="A" /> A: Tru <br />
+        <input type="radio" name="q3" value="B" /> B: Rocky <br />
+        <input type="radio" name="q3" value="C" /> C: Aya <br />
+        <input type="radio" name="q3" value="D" /> D: Axle
+      </li>
     </ol>
 
-    <br>
-
-    <button onclick="checkQuiz()">Submit</button>
+    <br />
 
     <p id="result"></p>
-
+    <button id="submitBtn">Submit</button>
     <script>
-        function checkQuiz() {
-            let score = 0;
-        if (document.querySelector('input[name="q1"]:checked')?.value === "A") score++;
-        if (document.querySelector('input[name="q2"]:checked')?.value === "C") score++;
-        if (document.querySelector('input[name="q3"]:checked')?.value === "C") score++;
+    
+    const button = document.getElementById("submitBtn");
+    button.addEventListener("click", checkQuiz);
+
+      function checkQuiz() {
+        let score = 0;
+        if (document.querySelector('input[name="q1"]:checked')?.value === "A")
+          score++;
+        if (document.querySelector('input[name="q2"]:checked')?.value === "C")
+          score++;
+        if (document.querySelector('input[name="q3"]:checked')?.value === "C")
+          score++;
 
         document.getElementById("result").textContent =
-        "You scored " + score + " out of 3.";
-        }
+          "You scored " + score + " out of 3.";
+      }
     </script>
-</body>
+  </body>
 </html>
