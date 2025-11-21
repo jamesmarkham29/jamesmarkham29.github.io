@@ -30,9 +30,9 @@
 
       <li>
         What is my older dogs name?<br />
-        <input type="radio" name="q3" value="A" /> A: Tru <br />
-        <input type="radio" name="q3" value="B" /> B: Rocky <br />
-        <input type="radio" name="q3" value="C" /> C: Aya <br />
+        <input type="radio" name="q3" value="A" /> A: Tru <br/>
+        <input type="radio" name="q3" value="B" /> B: Rocky <br/>
+        <input type="radio" name="q3" value="C" /> C: Aya <br/>
         <input type="radio" name="q3" value="D" /> D: Axle
       </li>
     </ol>
@@ -40,38 +40,40 @@
     <br />
 
     <p id="result"></p>
-    <button id="submitBtn">Submit</button>
-    <script>
-    
+<button id="submitBtn">Submit</button>
+
+<script>
+  const button = document.getElementById("submitBtn");
+  button.addEventListener("click", checkQuiz);
+
+  function checkQuiz() {
+    let score = 0;
+
+    if (document.querySelector('input[name="q1"]:checked')?.value === "A")
+      score++;
+    if (document.querySelector('input[name="q2"]:checked')?.value === "C")
+      score++;
+    if (document.querySelector('input[name="q3"]:checked')?.value === "C")
+      score++;
+
+ 
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = "You scored " + score + " out of 3.";
+
   
-    
-    const button = document.getElementById("submitBtn");
-    button.addEventListener("click", checkQuiz);
-
-      function checkQuiz() {
-        let score = 0;
-        if (document.querySelector('input[name="q1"]:checked')?.value === "A")
-          score++;
-        if (document.querySelector('input[name="q2"]:checked')?.value === "C")
-          score++;
-        if (document.querySelector('input[name="q3"]:checked')?.value === "C")
-          score++;
-
-        document.getElementById("result").textContent =
-          "You scored " + score + " out of 3.";
-
-          if (score == 2) {
-            result.innerText = "So Close! You scored 2 out of 3. ";
-        
-          }
-          if (score == 3) {
-            result.innerText = "Exelent! You scored 3 out of 3.";
-          }
-
-          if (score = 1) {
-            result.innerText = "Better luck next time"
-          }
-      }
-    </script>
+    if (score === 2) {
+      resultElement.innerText = "So Close! You scored 2 out of 3.";
+    }
+    if (score === 3) {
+      resultElement.innerText = "Excellent! You scored 3 out of 3.";
+    }
+    if (score === 1) {
+      resultElement.innerText = "Better luck next time! You scored 1 out of 3.";
+    }
+    if (score === 0) {
+      resultElement.innerText = "Just give up atp! You scored 0 out of 3.";
+    }
+  }
+</script>
   </body>
 </html>
