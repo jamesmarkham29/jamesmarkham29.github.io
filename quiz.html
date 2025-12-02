@@ -56,21 +56,18 @@
     if (document.querySelector('input[name="q3"]:checked')?.value === "C")
       score++;
 
- 
     const resultElement = document.getElementById("result");
-    resultElement.textContent = "You scored " + score + " out of 3.";
+    displayScore(score, resultElement);
+  }
 
-  
-    if (score === 2) {
-      resultElement.innerText = "So Close! You scored 2 out of 3.";
-    }
+  function displayScore(score, resultElement) {
     if (score === 3) {
       resultElement.innerText = "Excellent! You scored 3 out of 3.";
-    }
-    if (score === 1) {
+    } else if (score === 2) {
+      resultElement.innerText = "So Close! You scored 2 out of 3.";
+    } else if (score === 1) {
       resultElement.innerText = "Better luck next time! You scored 1 out of 3.";
-    }
-    if (score === 0) {
+    } else {
       resultElement.innerText = "Just give up atp! You scored 0 out of 3.";
     }
   }
