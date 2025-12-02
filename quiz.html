@@ -71,6 +71,16 @@
       resultElement.innerText = "Just give up atp! You scored 0 out of 3.";
     }
   }
+  document.addEventListener("keydown", function(e) {
+    if (e.code === "Space") {
+      document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.checked = false;
+      });
+      document.getElementById("result").innerText = "";
+    }
+  });
+  
 </script>
+<p>Once you submit press space to retry</p>
   </body>
 </html>
