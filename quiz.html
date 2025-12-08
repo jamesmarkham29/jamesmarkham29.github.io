@@ -30,9 +30,9 @@
 
       <li>
         What is my older dogs name?<br />
-        <input type="radio" name="q3" value="A" /> A: Tru <br/>
-        <input type="radio" name="q3" value="B" /> B: Rocky <br/>
-        <input type="radio" name="q3" value="C" /> C: Aya <br/>
+        <input type="radio" name="q3" value="A" /> A: Tru <br />
+        <input type="radio" name="q3" value="B" /> B: Rocky <br />
+        <input type="radio" name="q3" value="C" /> C: Aya <br />
         <input type="radio" name="q3" value="D" /> D: Axle
       </li>
     </ol>
@@ -40,47 +40,47 @@
     <br />
 
     <p id="result"></p>
-<button id="submitBtn">Submit</button>
+    <button id="submitBtn">Submit</button>
 
-<script>
-  const button = document.getElementById("submitBtn");
-  button.addEventListener("click", checkQuiz);
+    <script>
+      const button = document.getElementById("submitBtn");
+      button.addEventListener("click", checkQuiz);
 
-  function checkQuiz() {
-    let score = 0;
+      function checkQuiz() {
+        let score = 0;
 
-    if (document.querySelector('input[name="q1"]:checked')?.value === "A")
-      score++;
-    if (document.querySelector('input[name="q2"]:checked')?.value === "C")
-      score++;
-    if (document.querySelector('input[name="q3"]:checked')?.value === "C")
-      score++;
+        if (document.querySelector('input[name="q1"]:checked')?.value === "A")
+          score++;
+        if (document.querySelector('input[name="q2"]:checked')?.value === "C")
+          score++;
+        if (document.querySelector('input[name="q3"]:checked')?.value === "C")
+          score++;
 
-    const resultElement = document.getElementById("result");
-    displayScore(score, resultElement);
-  }
+        const resultElement = document.getElementById("result");
+        displayScore(score, resultElement);
+      }
 
-  function displayScore(score, resultElement) {
-    if (score === 3) {
-      resultElement.innerText = "Excellent! You scored 3 out of 3.";
-    } else if (score === 2) {
-      resultElement.innerText = "So Close! You scored 2 out of 3.";
-    } else if (score === 1) {
-      resultElement.innerText = "Better luck next time! You scored 1 out of 3.";
-    } else {
-      resultElement.innerText = "Just give up atp! You scored 0 out of 3.";
-    }
-  }
-  document.addEventListener("keydown", function(e) {
-    if (e.code === "Space") {
-      document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.checked = false;
+      function displayScore(score, resultElement) {
+        if (score === 3) {
+          resultElement.innerText = "Excellent! You scored 3 out of 3.";
+        } else if (score === 2) {
+          resultElement.innerText = "So Close! You scored 2 out of 3.";
+        } else if (score === 1) {
+          resultElement.innerText =
+            "Better luck next time! You scored 1 out of 3.";
+        } else {
+          resultElement.innerText = "Just give up atp! You scored 0 out of 3.";
+        }
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.code === "Space") {
+          document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+            radio.checked = false;
+          });
+          document.getElementById("result").innerText = "";
+        }
       });
-      document.getElementById("result").innerText = "";
-    }
-  });
-  
-</script>
-<p>Once you submit press space to retry</p>
+    </script>
+    <p>Once you submit press space to retry</p>
   </body>
 </html>
