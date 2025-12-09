@@ -6,13 +6,10 @@ html {
 --accent: #60ebe2;
 
 }
-* {
-    /* border: 1px solid pink; */ 
-}
 body {
     color: var(--text);
     background: VAR(--background);
-    font-family: "great vibes";
+    font-family: "Roboto";
     font-size: xx-large;
     font-weight: 300;
     font-style: normal;
