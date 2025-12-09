@@ -44,9 +44,6 @@ li::marker {
     color: var(--secondary);
      text-align: center;
 }
-.borngrin{
-   border: 2px solid var(--secondary);
-}
 
 h1{
     padding-top: 20px 
@@ -58,10 +55,6 @@ h2{
 
 h2 {
     margin-left: 20px;
-}
-
-h1 {
-    border: 2px solid var(--secondary)
 }
 
 h1 {
