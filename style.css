@@ -46,14 +46,19 @@ li::marker {
 }
 
 h1{
-    padding-top: 20px 
+    padding-top: 5px 
 }
 
 h2{
-    padding-bottom: 20px
+    padding-bottom: 5px
 }
 
 h2 {
-    height: 10px;
+    height: 4px;
 } 
+
+a {
+font-family: "coming soon";
+font-size: 1.2em;
+}
 
